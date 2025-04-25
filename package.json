@@ -1,0 +1,24 @@
+{
+  "name": "webdevelopmentgroupwork",
+  "version": "1.0.0",
+  "description": "the task is to :\r Recreate the above portfolio website as is using HTML and CSS.\r Feel free to use bootstrap library\r Step 1: i made this git repo now am gonna clone into my folder\r Step 2: am done cloning now this step 2 am typing on my branch that i have opened on VS code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNWekesa/WebDevelopmentGroupWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GNWekesa/WebDevelopmentGroupWork/issues"
+  },
+  "homepage": "https://github.com/GNWekesa/WebDevelopmentGroupWork#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "express": "^5.1.0"
+  }
+}
