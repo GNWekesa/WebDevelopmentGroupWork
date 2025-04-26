@@ -2,20 +2,442 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Bootstrap Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John Watson Portfolio</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <!-- my optional styles -->
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- check this, when i added it is allowed my images in  Success Work Section below to be stacked horizonally, it is Bootstrap CSS CDN -->
+  <!-- Correct Bootstrap CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center text-primary">Hello, Bootstrap in Node.js!</h1>
-    <p class="lead text-center">This site uses Bootstrap 5.3.5 from npm.</p>
-    <button class="btn btn-success">Click Me</button>
-  </div>
+      <!-- navigation bar-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent;">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="#">
+            <img src="/images/logo.png" alt="Logo" style="height: 30px; margin-right: 10px;">
+            UI Portfolio
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Blog Grid</a></li>
+                  <li><a class="dropdown-item" href="#">Blog Details</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                  <li><a class="dropdown-item" href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+            </ul>
+      
+            <div class="d-flex">
+              <a href="#" class="btn btn-success rounded-pill px-4">Hire Me</a>
+            </div>
+          </div>
+        </div>
+      </nav>      
+      <!-- end of navigation bar-->
 
-  <!-- Bootstrap JS -->
-  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Hero Section Start -->
+      <section id="hero" class="position-relative d-flex align-items-center" style="min-height: 100vh; background: url('/images/keyboard-bg.jpeg') no-repeat center center/cover;">
+
+        <!-- Bluish Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 42, 75, 0.85);"></div>
+
+        <!-- Floating Vertical Action Menu -->
+        <div class="position-absolute top-50 end-0 translate-middle-y me-2 d-flex flex-column align-items-center bg-dark rounded p-2" style="z-index: 10; width: 60px;">
+          <a href="#" class="text-white mb-2">
+            <i class="bi bi-chevron-double-right fs-5"></i>
+          </a>
+          <hr class="bg-light w-100 my-2">
+          <a href="#back" class="text-white mb-3 d-flex flex-column align-items-center small text-decoration-none">
+            <i class="bi bi-arrow-left fs-4"></i>
+            <span class="mt-1">Back</span>
+          </a>
+          <a href="#download" class="text-white mb-3 d-flex flex-column align-items-center small text-decoration-none">
+            <i class="bi bi-download fs-4"></i>
+            <span class="mt-1">Download</span>
+          </a>
+          <a href="#buy" class="text-white d-flex flex-column align-items-center small text-decoration-none">
+            <i class="bi bi-cart fs-4"></i>
+            <span class="mt-1">Buy</span>
+          </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container position-relative">
+          <div class="row align-items-center">
+
+            <!-- Left Side: Text -->
+            <div class="col-lg-6 text-center text-lg-start">
+              <h1 class="fw-bold text-white mb-3">Hi, I'm John Watson</h1>
+              <!-- animated using JS-->
+              <h2 class="display-3 fw-bold text-white mb-3">
+                <span id="typing-text"></span><span class="blinking-cursor">|</span>
+              </h2>              
+              <p class="text-light mb-4 fs-5">
+                I love Graphic design and Photography and have been working on my portfolio since 2016.<br>
+                I can give your business a new Creative start right away!
+              </p>
+              <div class="d-flex flex-wrap justify-content-center justify-content-lg-start">
+                <a href="#contact" class="btn btn-success rounded-pill px-4 me-3 mb-3 mb-lg-0">Hire Me</a>
+                <a href="#portfolio" class="btn btn-outline-light rounded-pill px-4">My Portfolio</a>
+              </div>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+              <img src="/images/him.png" class="img-fluid" alt="John Watson" style="max-height: 550px;">
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- Hero Section End -->
+
+  <!-- About Me Section -->
+  <section id="about-me" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Image -->
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <img src="/images/himbw.png" alt="Profile" class="img-fluid rounded">
+        </div>
+  
+        <!-- Right: Content -->
+        <div class="col-md-7">
+          <p class="text-uppercase text-muted small">My Biography</p>
+          <h2 class="fw-bold">A Lead UI Designer & Web Developer Based In UK</h2>
+          <p class="text-muted">
+            I love Graphic design and Photography and have been working on my portfolio <br>
+            since 2016. I Can give your business a new Creative start right away! 
+            Contact me and we will discuss your projects!
+          </p>
+  
+          <div class="row mb-3">
+            <div class="col-6">
+              <p class="mb-1"><strong>Name:</strong> John Watson</p>
+              <p class="mb-1"><strong>Email:</strong> example@mail.com</p>
+            </div>
+            <div class="col-6">
+              <p class="mb-1"><strong>From:</strong> London, UK</p>
+              <p class="mb-1"><strong>Phone:</strong> +21 234 567 8901</p>
+            </div>
+          </div>
+  
+          <div class="mb-4">
+            <a href="#" class="me-3 text-dark fs-4"><i class="bi bi-behance"></i></a>
+            <a href="#" class="me-3 text-dark fs-4"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="me-3 text-dark fs-4"><i class="bi bi-twitter"></i></a>
+          </div>
+  
+          <div>
+            <a href="#" class="btn btn-success rounded-pill px-4 me-2">Hire Me</a>
+            <a href="#" class="btn btn-outline-success rounded-pill px-4">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- end of About Me Section -->
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="mb-5">What I Do For You</h2>
+
+        <div class="row g-4">
+
+          <!-- Service Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-start">
+                <div class="mb-4">
+                  <img src="/images/webicon.png" alt="Web Development" class="img-fluid" />
+                </div>
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text text-muted">Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-start">
+                <div class="mb-4">
+                  <img src="/images/appicon.png" alt="App Development" class="img-fluid" />
+                </div>
+                <h5 class="card-title">App Development</h5>
+                <p class="card-text text-muted">Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-start">
+                <div class="mb-4">
+                  <img src="/images/photoicon.png" alt="Photography" class="img-fluid" />
+                </div>
+                <h5 class="card-title">Photography</h5>
+                <p class="card-text text-muted">Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- More Services Link -->
+        <div class="mt-5">
+          <a href="#" class="text-success fw-bold text-decoration-none">
+            More Services &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  <!-- Skills Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Left Side: Image -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="/images/artbook.png" alt="Skills Image" class="img-fluid rounded">
+        </div>
+  
+        <!-- Right Side: Skills Content -->
+        <div class="col-lg-6">
+  
+          <small class="text-uppercase text-muted">My Skills</small>
+          <h2 class="mb-4">My Featured Skills</h2>
+  
+          <p class="text-muted mb-4">
+            I specialize in Branding and Strategy, and am passionate about creating Awesome Portfolio work.
+            And I always ready to impress the audience with my Creativity.
+          </p>
+  
+          <!-- Skills Progress Bars -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>UI/UX Design</span>
+            </div>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"></div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Ideas & Technology</span>
+            </div>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 85%;"></div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Branding Design</span>
+            </div>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 60%;"></div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Responsive Web Design</span>
+            </div>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"></div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
+<!-- end of skills section-->  
+
+    <!-- tech section-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <!-- Left Side: Services -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="row g-4">
+              
+              <!-- Service Item -->
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-wordpress fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">Web Development</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-palette-fill fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">Design Trends</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-bar-chart-line-fill fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">Research & Analysis</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-headset fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">Customer Support</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-phone-fill fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">Responsive Design</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-6">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-stack fs-1 text-success me-3"></i>
+                  <div>
+                    <h5 class="mb-1">PSD Design</h5>
+                    <p class="small text-muted">Lorem ipsum viverra libero set. Pellen ut justo, in ligula at.</p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <!-- Right Side: Image -->
+          <div class="col-lg-6 text-center">
+            <img src="/images/him.png" alt="Person" class="img-fluid rounded">
+          </div>
+    
+        </div>
+      </div>
+    </section>  
+    <!-- end of tech section-->
+
+
+    <!-- Statistics Section Start -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-4">
+            <h2 class="fw-bold">135</h2>
+            <p>Finished Projects</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2 class="fw-bold">225</h2>
+            <p>Working Hours</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2 class="fw-bold">115</h2>
+            <p>Online Support</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h2 class="fw-bold">272</h2>
+            <p>Happy Customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Section End -->
+
+
+      <!-- Success Work Section -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="text-center">My Success Work</h3>
+          <div class="row mt-4">
+            <!-- Portfolio images -->
+            <div class="col-4 mb-4">
+              <img src="images/greydesk.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-4 mb-4">
+              <img src="images/deskcurvescreen.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-4 mb-4">
+              <img src="images/flowervase.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-4 mb-4">
+              <img src="images/womanondesk.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-4 mb-4">
+              <img src="images/handswithring.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-4 mb-4">
+              <img src="images/handsnmac.png" class="img-fluid rounded" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+  <!-- To align my footer image perfectly with the sections above-->
+    <footer>
+      <img src="/images/footerimage.png" class="w-100" alt="Footer">
+    </footer>
+  <!-- Bootstrap Bundle JS -->
+  <!-- <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Correct Bootstrap Bundle JS from CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/js/script.js"></script>
 </body>
 </html>

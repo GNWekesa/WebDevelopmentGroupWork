@@ -36,3 +36,4 @@ WebDevelopmentGroupWork/
 └── views/
     └── index.html
 /////above work don on 25th April 2025, more tomorrow night after church, putting index.html in views folder caused an error so i deleted it
+on this day, i used prompt engineering and my thinking to continue with the webpage
