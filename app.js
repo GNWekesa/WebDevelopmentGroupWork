@@ -27,29 +27,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
-
-
-//start 
-window.addEventListener('DOMContentLoaded', () => {
-  const typingTextElement = document.getElementById("typing-text");
-
-  if (!typingTextElement) {
-    console.error("❌ Cannot find #typing-text element!");
-    return;
-  }
-
-  const text = "Web Designer";
-  let index = 0;
-
-  function typeWriter() {
-    if (index < text.length) {
-      typingTextElement.textContent += text.charAt(index); // <-- use textContent
-      index++;
-      setTimeout(typeWriter, 150);
-    }
-  }
-
-  typeWriter();
-});
-
-//end
